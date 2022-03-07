@@ -1,0 +1,84 @@
+<div class="form-content">
+    <form class="form" [formGroup]="addressBookFormGroup" (ngSubmit)="onSubmit()">
+        <div class="form-head">
+            <span>Person Address Form</span>
+            <img class="form-head-image" src="../assets/cancel.jpeg" alt="logo" routerLink="">
+        </div>
+
+        <div class="form-fields-container">
+            <div class="row-content">
+                <mat-label class="label"> Full Name  </mat-label>
+                <mat-form-field class="input-field-width" appearance="outline">
+
+                    <!-- <mat-card style="width: 100%; padding:12px 20px;margin: 4px 0; box-sizing: border-box"> -->
+                        <input matInput formControlName="fullName" placeholder="Enter the name ">
+
+                        <!-- <mat-error *ngIf="checkError('firstName', 'required')">Name is required</mat-error>
+                        <mat-error *ngIf="checkError('firstName', 'pattern')">Invalid name format</mat-error> -->
+                    <!-- </mat-card> -->
+                </mat-form-field>
+            </div>
+
+            
+
+            <div class="row-content">
+                <mat-label class="label">Phone Number</mat-label>
+                <mat-form-field class="input-field-width" appearance="outline">
+                    <!-- <mat-card style="width: 100%; padding:12px 20px;margin: 4px 0; box-sizing: border-box"> -->
+                          <input matInput formControlName="phoneNumber" placeholder="Enter digits ">
+                          
+                     <!-- </mat-card> -->
+                </mat-form-field>
+            </div>
+
+            <div class="row-content">
+                <mat-label class="label">Address</mat-label>
+                <mat-form-field class="input-field-width" appearance="outline" >
+                    <textarea matInput style="height:100px; align-items:center; padding-top: 20px;" formControlName="address" placeholder="Enter person Address "></textarea>
+                </mat-form-field>
+            </div>
+
+            <div class="row-content-address">
+                <div class="city-container subAddress">
+                    <mat-label class="label">City</mat-label>
+                    <mat-form-field appearance="outline" >
+                        <mat-label class="label">Select City</mat-label>
+                        
+                        <mat-select formControlName="city">
+
+                            <mat-option *ngFor="let city of City" value="{{city}}">{{city}}</mat-option>
+                        </mat-select>
+                    
+                    
+                    </mat-form-field>
+                </div>
+             
+
+                <div class="state-container subAddress">
+                    <mat-label class="label">State</mat-label>
+                    <mat-form-field appearance="outline" placeholder="select state">
+                        <mat-label class="label">Select State</mat-label>
+                        <mat-select formControlName="state">
+                            <mat-option *ngFor="let state of State" value="{{state}}">{{state}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="zip-container subAddress">
+                    <mat-label class="label">Zip Code</mat-label>
+                    <mat-form-field class="" appearance="outline">
+                        <input matInput formControlName="zipCode" placeholder="Pincode..">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="add-reset">
+                <div>
+                    <button [disabled]="!addressBookFormGroup.valid" mat-raised-button class="button-submit"
+                        type="submit">Add</button>
+
+                    <button mat-raised-button class="button-reset" type="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

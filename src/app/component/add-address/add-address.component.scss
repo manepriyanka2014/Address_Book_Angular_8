@@ -1,0 +1,139 @@
+.form-content {
+    min-height: auto;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    // margin-top: 30px;
+    padding: 2%;
+}
+
+.form {
+    width: auto;
+    background: white 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px grey;
+    border-radius: 8px;
+    opacity: 1;
+}
+
+.form-head {
+    padding-left: 110px;
+    text-align: center;
+    font: normal normal normal 28px/30px Roboto;
+    background: #008cff 0% 0% no-repeat padding-box;
+    color: white;
+    text-transform: capitalize;
+    opacity: 1;
+    padding-bottom: 30px;
+    padding-top: 35px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.form-head-image {
+    margin-left: 300px
+}
+
+.form-fields-container {
+    margin-top: 40px;
+}
+
+.row-content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 140px;
+    margin-right: 0px;
+}
+
+.label {
+    text-align: left;
+    font: normal normal normal 16px/22px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    opacity: 1;
+}
+
+.input-field-width {
+    width: 90%;
+    align-items: center;
+}
+
+.subAddress {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.city-container,
+.state-container {
+    padding-right: 10px;
+}
+
+.zip-container {
+    padding-right: 50px;
+}
+
+.row-content-address {
+    display: flex;
+    flex-direction: row;
+    margin-left: 140px;
+    width: 70.5%;
+    // margin-right: 100px;
+}
+
+.add-reset {
+    padding-left: 250px;
+    width: 84%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.button-submit {
+    font-size: 20px;
+    font-family: Roboto;
+    font: normal normal normal 20px/26px Roboto;
+    letter-spacing: 0px;
+    opacity: 1;
+    font-weight: 400;
+    min-width: 140px;
+    padding: 7px 7px;
+    cursor: pointer;
+    color: #42515f;
+    background: #e2e2e2 0% 0% no-repeat padding-box;
+    border: 1px solid #969696;
+    border-radius: 5px;
+    margin: 20px 0 0 20px;
+}
+
+.button-reset {
+    font-size: 20px;
+    font-family: Roboto;
+    font: normal normal normal 20px/26px Roboto;
+    letter-spacing: 0px;
+    opacity: 1;
+    font-weight: 400;
+    min-width: 140px;
+    padding: 7px 7px;
+    cursor: pointer;
+    color: #42515f;
+    background: #e2e2e2 0% 0% no-repeat padding-box;
+    border: 1px solid #969696;
+    border-radius: 5px;
+    margin: 20px 0 0 20px;
+}
+
+.button-submit:hover {
+    background-color: #008cff;
+    color: #ffff;
+}
+
+.button-reset:hover {
+    background-color: #42515f;
+    color: #ffff;
+}
+
+.mat-form-field {
+    margin-bottom: 0px;
+}

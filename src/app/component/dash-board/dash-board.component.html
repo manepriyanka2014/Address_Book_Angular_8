@@ -1,0 +1,42 @@
+<div class="main-content">
+    <div class="header-content">
+        <div class="add-detail-text">
+            Person Details
+        </div>
+        <a class="add-button" routerLink="address">
+            <img src="/src/assets/add-24px.svg" alt="">Add Person
+        </a>
+    </div>
+    <div class="table-main">
+        <table id="table-display" class="table">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th>Phone </th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+
+                </tr>
+            </thead>
+             <tr *ngFor="let address of addressDetails | orderBy: orderHeader : reverse">
+
+                <td> {{address.fullName }} </td>
+                <td>{{address.address}}</td>
+                <td>{{address.city}}</td>
+                <td>{{address.state}}</td>
+                <td>{{address.zipCode}}</td>
+                <td>{{address.phoneNumber}}</td>
+                
+                
+                <td>
+                    <img (click)="delete(address.id)" src="../../../assets/delete.svg" alt="delete"></td>
+                    <td><img (click)="update(address)" src="../../../assets/edit.svg" alt="edit"> </td>
+
+            </tr>
+        </table>
+    </div>
+</div>
